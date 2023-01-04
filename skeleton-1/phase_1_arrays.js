@@ -33,3 +33,27 @@ Array.prototype.twoSum = function() {
 }
 
 //2D array
+
+// Array.prototype.transpose = function() {
+//     let outterArr = []
+//     for (let i = 0; i < this.length; i++){
+//         let innerArr = []
+
+//     }
+
+// }
+
+Array.prototype.transpose = function transpose() {
+    let temp = []; 
+    for (let i = 0; i < this.length; i++){
+        for (let j = 0; j < i; j++){
+            temp = this[i][j]
+            this[i][j] = this[j][i]
+            this[j][i] = temp
+        }
+    }
+    return temp
+}
+
+let pose = [[1,2,3],[1,2,3],[1,2,3]]
+console.log(pose.transpose())
